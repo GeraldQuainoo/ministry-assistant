@@ -148,9 +148,7 @@ function Home() {
       );
       localStorage.setItem("hoursCompleted", JSON.stringify(hoursCompleted));
     },
-    savedMonthlyGoalHours = localStorage.getItem("monthlyGoalHours");
 
-savedHoursCompleted = localStorage.getItem("hoursCompleted");
     [monthlyGoalHours, hoursCompleted],
   );
   useEffect(
