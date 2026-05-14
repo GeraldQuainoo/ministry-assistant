@@ -6,9 +6,9 @@ import FormModal from "./GoalModal";
 
 const savedStartTime = localStorage.getItem("timer");
 
-const savedMonthlyGoalHours = localStorage.getItem("monthlyGoalHours");
+let savedMonthlyGoalHours = localStorage.getItem("monthlyGoalHours");
 
-const savedHoursCompleted = localStorage.getItem("hoursCompleted");
+let savedHoursCompleted = localStorage.getItem("hoursCompleted");
 const initialTimerState = {
   time: !savedStartTime ? 0 : JSON.parse(savedStartTime),
   isRunning: false,
@@ -148,6 +148,9 @@ function Home() {
       );
       localStorage.setItem("hoursCompleted", JSON.stringify(hoursCompleted));
     },
+    savedMonthlyGoalHours = localStorage.getItem("monthlyGoalHours");
+
+savedHoursCompleted = localStorage.getItem("hoursCompleted");
     [monthlyGoalHours, hoursCompleted],
   );
   useEffect(
