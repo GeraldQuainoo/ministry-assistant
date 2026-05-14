@@ -1,0 +1,250 @@
+/* Modal Styles */
+:root {
+  --primary: #2563eb;
+  --secondary: #6366f1;
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text-dark: #0f172a;
+  --text-light: #64748b;
+  --body-bg: #cbd5e1;
+  --border: #e2e8f0;
+  --text-small: 1.2rem;
+  --color-purple: #a855f7;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn--primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn--primary:hover {
+  background-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.btn--secondary {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.btn--secondary:hover {
+  background-color: #e0e0e0;
+}
+
+/* Circular Progress Styles */
+.circular-progress {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.progress-circle-bg {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 6;
+}
+
+.progress-circle-fill {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.3s ease;
+}
+
+.progress-text {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* color: #4caf50; */
+}
+
+/* Goal Container */
+.goal-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.goal-container:hover {
+  background-color: #f5f5f5;
+}
+
+/* Territory Form Styles */
+.addTerritory {
+  max-width: 480px;
+  /* margin: 2rem auto; */
+  padding: 1rem;
+  /* background: #ffffff; */
+  /* border-radius: 16px; */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.territoryForm {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.territoryForm h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #222;
+}
+
+.formGroup,
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.formGroup label,
+.form-group label {
+  color: #4c4c4c;
+  font-weight: 600;
+}
+
+.formGroup input,
+.form-group input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1.8px solid #dcdcdc;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.formGroup input:focus,
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.formActions .btn {
+  min-width: 120px;
+}
+
+/* .territoryForm .btn--primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.territoryForm .btn--secondary {
+  background-color: #f6f6f6;
+  color: #333;
+}
+
+.territoryForm .btn--secondary:hover {
+  background-color: #eaeaea;
+} */
