@@ -209,9 +209,9 @@ function Home() {
             </div>
             <div>
               <h3 className="headingTertiary">
-                Monthly Goal: {monthlyGoalHours || 0}hrs
+                Monthly Goal: {savedMonthlyGoalHours || monthlyGoalHours}hrs
               </h3>
-              <p className="textSmall">{hoursCompleted || 0} hours completed</p>
+              <p className="textSmall">{savedHoursCompleted || hoursCompleted} hours completed</p>
             </div>
           </div>
         </div>
