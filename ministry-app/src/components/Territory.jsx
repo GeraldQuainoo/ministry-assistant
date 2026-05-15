@@ -74,7 +74,7 @@ function Territory() {
     <div className="territoryBox">
       {/* <Search /> */}
       <div className="mapContainer">
-        {
+        {position.length > 0 &&
           <MapContainer
             className="map"
             center={position.length ? position : [5.6, -0.1]}
