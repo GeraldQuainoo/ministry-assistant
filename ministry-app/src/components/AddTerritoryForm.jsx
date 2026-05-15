@@ -38,7 +38,7 @@ function AddTerritoryForm({ dispatch, clickedPos }) {
   return (
     <div
       className="modal-overlay addTerritory"
-      onClick={() => dispatch({ type: "closeTerritoryForm" })}
+      onClick={() => dispatch({ type: "close" })}
     >
       <form
         className="modal-content territoryForm"
@@ -72,7 +72,7 @@ function AddTerritoryForm({ dispatch, clickedPos }) {
 
         <div className="formActions">
           <button
-            onClick={(e) => handleAddterritory(e)}
+            onSubmit={(e) => handleAddterritory(e)}
             type="submit"
             className="btn btn--primary"
           >
@@ -81,7 +81,7 @@ function AddTerritoryForm({ dispatch, clickedPos }) {
           <button
             type="button"
             className="btn btn--secondary"
-            onSubmit={() => dispatch({ type: "closeTerritoryForm" })}
+            onClick={() => dispatch({ type: "close" })}
           >
             Cancel
           </button>
