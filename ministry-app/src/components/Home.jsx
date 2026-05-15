@@ -140,8 +140,6 @@ function Home() {
     }
   }
 
- 
-
   useEffect(
     function () {
       localStorage.setItem(
@@ -160,13 +158,13 @@ function Home() {
     [userName],
   );
 
- const date = new Date();
-  const formatted = date.toLocaleDateString("en-US",{
-    weekday:"long",
-    month:"long",
-    day:"numeric",
+  const date = new Date();
+  const formatted = date.toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
   });
-  
+
   return (
     <div>
       <Header>
@@ -221,7 +219,9 @@ function Home() {
               <h3 className="headingTertiary">
                 Monthly Goal: {savedMonthlyGoalHours || monthlyGoalHours}hrs
               </h3>
-              <p className="textSmall">{savedHoursCompleted || hoursCompleted} hours completed</p>
+              <p className="textSmall">
+                {savedHoursCompleted || hoursCompleted} hours completed
+              </p>
             </div>
           </div>
         </div>
