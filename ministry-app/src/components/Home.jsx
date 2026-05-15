@@ -140,6 +140,8 @@ function Home() {
     }
   }
 
+ 
+
   useEffect(
     function () {
       localStorage.setItem(
@@ -158,6 +160,13 @@ function Home() {
     [userName],
   );
 
+ const date = new Date();
+  const formatted = date.toLocaleDateString("en-US",{
+    weekday:"long",
+    month:"long",
+    day:"numeric",
+  });
+  
   return (
     <div>
       <Header>
@@ -176,7 +185,7 @@ function Home() {
                   {userName ? userName : "Add your Name"}
                 </p>
               </h1>
-              <p className="textSmall">Wednesday, May 13</p>
+              <p className="textSmall">{formatted}</p>
             </span>
             <span className="start" onClick={handleStartStop}>
               {isRunning ? "Stop" : time > 0 ? "Continue" : "Start"}
