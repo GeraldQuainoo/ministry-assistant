@@ -72,7 +72,7 @@ function AddTerritoryForm({ dispatch, clickedPos }) {
 
         <div className="formActions">
           <button
-            onSubmit={(e) => handleAddterritory(e)}
+            onClick={(e) => handleAddterritory(e)}
             type="submit"
             className="btn btn--primary"
           >
