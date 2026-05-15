@@ -37,7 +37,7 @@ function reducer(state, action) {
         showForm: false,
       };
     case "close":
-      return { ...state, openAddTerritoryForm: false };
+      return { ...state, showForm: false };
   }
 }
 
@@ -74,7 +74,7 @@ function Territory() {
     <div className="territoryBox">
       {/* <Search /> */}
       <div className="mapContainer">
-        {position.length > 0 &&
+        {position.length > 0 && (
           <MapContainer
             className="map"
             center={position.length ? position : [5.6, -0.1]}
@@ -97,7 +97,7 @@ function Territory() {
               </Marker>
             ))}
           </MapContainer>
-        }
+        )}
       </div>
       <div className="territoryContent">
         <h3 className="headingSecondary territoryNav">Territories</h3>
